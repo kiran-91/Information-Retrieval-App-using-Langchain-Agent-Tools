@@ -35,7 +35,7 @@ if prompt:=st.chat_input(placeholder="Type your message here..."):
     st.session_state.messages.append({"role":"User", "content":prompt})
     st.chat_message("User").write(prompt)
     
-    llm=ChatGroq(api_key=api_key, model="Llama3-8b-8192", streaming=True)
+    llm=ChatGroq(api_key=api_key, model="Llama3.3-70b-versatile", streaming=True)
     tools=[search, arxiv, wiki]
     
     search_agent=initialize_agent(tools=tools, llm=llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, handling_parsing_errors=True)
