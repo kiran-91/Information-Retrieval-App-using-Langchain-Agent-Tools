@@ -1,98 +1,106 @@
-# Information Retrieval App using Langchain Agent & Tools
+# 🌐 Information Retrieval App using Langchain Agent & Tools
 
-## Project Overview
-This project is a Streamlit-based web application that integrates with LangChain tools to provide users with efficient, multi-source information retrieval. The app enables users to interact with a conversational chatbot that processes natural language queries. It retrieves information from multiple sources, including academic papers, Wikipedia articles, and web search results. By combining the power of ArXiv, Wikipedia, and DuckDuckGo APIs, the app offers an all-in-one platform for seamless knowledge discovery. Users can leverage the GROQ-powered large language model (LLM) for intelligent responses and explore detailed summaries of research papers and articles within a user-friendly interface
+## 🚀 Project Overview
+This project is a **Streamlit-based web application** that integrates with LangChain tools to provide users with efficient, multi-source information retrieval. It allows users to interact with a conversational chatbot that processes natural language queries and retrieves information from multiple sources, including:
 
-## Features
+- **Academic papers via ArXiv**
+- **Wikipedia articles**
+- **General web search results using DuckDuckGo**
 
-- **Conversational Interface**: Engage with a chatbot for natural language queries and responses.
-- **Multi-Source Search Tools**:
-  - **ArXiv API**: Fetches academic paper summaries from ArXiv.
-  - **Wikipedia API**: Provides concise Wikipedia article summaries.
-  - **DuckDuckGo API**: Conducts web searches.
-- **Streamlit Sidebar**: Includes a configuration panel for users to input their GROQ API key securely.
-- **Dynamic Message Handling**: Maintains chat history and processes user prompts seamlessly.
-- **LLM Integration**: Powered by the GROQ API for natural language understanding and generating responses.
+By leveraging the GROQ-powered large language model (LLM), the app ensures intelligent and detailed responses within a user-friendly interface. It's designed for researchers, students, and professionals seeking comprehensive knowledge discovery.
 
+---
 
-## Project Structure
+## ✨ Features
+
+- **🗣 Conversational Interface**: Natural language interaction for queries and responses.
+- **🔍 Multi-Source Search Tools**:
+  - **ArXiv API**: Summarizes academic papers.
+  - **Wikipedia API**: Fetches concise article summaries.
+  - **DuckDuckGo API**: Conducts comprehensive web searches.
+- **⚙️ Streamlit Sidebar**: Input API keys and configure settings securely.
+- **📜 Chat History Management**: Maintains a dynamic record of user queries and responses.
+- **🤖 LLM Integration**: Powered by GROQ API for advanced natural language processing.
+
+---
+
+## 📂 Project Structure
 
 ```
-📁 Project Folder
+📂 Project Folder
 ├── app.py                  # Main entry point for Streamlit
 ├── .env                    # To store the API keys
 ├── requirements.txt        # Dependencies for the app
-├── Dockerfile              # For docker containerization
-└── README.md
+├── Dockerfile              # For Docker containerization
+└── README.md               # Project documentation
 ```
 
+---
 
-## Installation
 
 ### Steps
 
-1. Clone the repository:
+1. **Clone the Repository**:
    ```bash
    git clone https://github.com/kiran-91/Information-Retrieval-App-using-Langchain-Agent-Tools.git
    cd Information-Retrieval-App-using-Langchain-Agent-Tools
    ```
 
-2. Create a virtual environment and activate it:
+2. **Set Up a Virtual Environment**:
    ```bash
-    python -m venv venv
-    source venv/bin/activate  # For Linux/MacOS
-    venv\Scripts\activate  # For Windows
+   python -m venv venv
+   source venv/bin/activate  # Linux/MacOS
+   venv\Scripts\activate  # Windows
    ```
 
-3. Install dependencies:
+3. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Create a `.env` file and add your GROQ API key and HuggingFace API key:
+4. **Configure Environment Variables**:
+   Create a `.env` file and add the following:
    ```env
-   GROQ_API_KEY=<GROQ API KEY>
-   HF_API_KEY=<HuggingFace API KEY>
+   GROQ_API_KEY=<Your GROQ API Key>
+   HF_API_KEY=<Your HuggingFace API Key>
    ```
 
-5. Run the application:
+5. **Run the Application**:
    ```bash
    streamlit run app.py
    ```
 
-## Results 
+---
+
+## 📊 Results
 If you're on Team Lazy like me and would rather skip all the tasks, no worries—just kick back and check out the Streamlit app right here!
-   ``` 
-   https://langchainagent.streamlit.app/
-   ```
 
+👉 **[LangChain Agent Streamlit App](https://langchainagent.streamlit.app/)**
 
-## How It Works
+---
 
-1. **API Integration**:
-   - ArXiv and Wikipedia API Wrappers are initialized with configuration options such as the number of results (`top_k_results`) and content truncation limit (`doc_content_chars_max`).
-   - The DuckDuckGo API wrapper is used for broader web search results.
+## 🌟 How It Works
 
-2. **Streamlit Interface**:
-   - A sidebar is provided for API key input and configuration.
-   - The main chat interface displays the conversation between the user and the chatbot.
+### 1. **API Integration**
+- **ArXiv**: Fetches academic papers based on user queries.
+- **Wikipedia**: Summarizes articles with concise and relevant details.
+- **DuckDuckGo**: Conducts web searches for broader information.
 
-3. **LLM and Agent Setup**:
-   - The `ChatGroq` class is used to interact with the GROQ-powered LLM.
-   - LangChain’s `initialize_agent` function configures the multi-tool agent in a Zero-Shot React framework.
+### 2. **Streamlit Interface**
+- A sidebar lets users securely input API keys.
+- A main chat interface provides conversational interactions.
 
-4. **User Interaction**:
-   - User inputs are processed via the `st.chat_input` field.
-   - The app dynamically updates chat history and displays responses from the integrated agent.
+### 3. **LLM and LangChain Agent**
+- The `ChatGroq` LLM processes user queries.
+- LangChain agents combine multiple tools for a seamless experience.
 
+### 4. **Dynamic Interaction**
+- User inputs are handled via `st.chat_input`.
+- Responses are dynamically displayed and stored in chat history.
 
+---
 
-## App Usage
-
-1. Start the application by running `streamlit run app.py` or by the above mentioned `app` link 
-2. Enter your GROQ API key in the sidebar.
-3. Use the chat interface to ask questions or search for information.
-4. View the results sourced from ArXiv, Wikipedia, or web searches.
+## 📸 Screenshots
 
 ![alt text](image.png)
 ![alt text](image-1.png)
@@ -100,17 +108,24 @@ If you're on Team Lazy like me and would rather skip all the tasks, no worries�
 ![alt text](image-3.png)
 ![alt text](image-5.png)
 ![alt text](image-4.png)
+---
 
+## 📜 License
+This project is licensed under the **GNU General Public License v3**. See the `LICENSE` file for details.
 
-## License
+---
 
-This project is licensed under the GNU General Public License v3. See the `LICENSE` file for details.
+## 🙌 Acknowledgments
 
-## Acknowledgments
+- [LangChain](https://www.langchain.com/): Framework for tool and LLM integration.
+- [Streamlit](https://streamlit.io/): For fast, interactive app development.
+- [GROQ API](https://www.groq.com/): For enabling advanced LLM responses.
+- [ArXiv](https://arxiv.org/): Academic paper repository.
+- [Wikipedia](https://www.wikipedia.org/): Article summaries.
+- [DuckDuckGo](https://duckduckgo.com/): Web search integration.
 
-- [LangChain](https://www.langchain.com/): For providing a flexible framework for integrating AI tools.
-- [Streamlit](https://streamlit.io/): For enabling fast and interactive app development.
-- [GROQ API](https://www.groq.com/): For LLM support.
-- [ArXiv](https://arxiv.org/): For providing access to academic papers.
-- [Wikipedia](https://www.wikipedia.org/): For offering article summaries.
+---
+
+## 📧 Contact
+For questions or contributions, feel free to connect!
 
