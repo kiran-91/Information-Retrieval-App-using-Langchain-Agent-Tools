@@ -1,7 +1,7 @@
 # Information Retrieval App using Langchain Agent & Tools
 
 ## Project Overview
-This project is a **Streamlit-based web application** that integrates with LangChain tools to provide users with efficient, multi-source information retrieval. The app allows users to query academic papers, Wikipedia articles, and web search results using ArXiv, Wikipedia, and DuckDuckGo APIs. It also supports conversational interaction using a large language model (LLM) through the GROQ API.
+This project is a Streamlit-based web application that integrates with LangChain tools to provide users with efficient, multi-source information retrieval. The app enables users to interact with a conversational chatbot that processes natural language queries. It retrieves information from multiple sources, including academic papers, Wikipedia articles, and web search results. By combining the power of ArXiv, Wikipedia, and DuckDuckGo APIs, the app offers an all-in-one platform for seamless knowledge discovery. Users can leverage the GROQ-powered large language model (LLM) for intelligent responses and explore detailed summaries of research papers and articles within a user-friendly interface
 
 ## Features
 
@@ -87,32 +87,16 @@ This project is a **Streamlit-based web application** that integrates with LangC
 3. Use the chat interface to ask questions or search for information.
 4. View the results sourced from ArXiv, Wikipedia, or web searches.
 
-## Dependencies
-
-- **Streamlit**: For building the web interface.
-- **LangChain**: For managing tools and LLM integration.
-- **ArXiv API Wrapper**: For academic paper search.
-- **Wikipedia API Wrapper**: For article summaries.
-- **DuckDuckGo Search API**: For web searches.
-
-## Future Enhancements
-
-- Add user authentication for enhanced security.
-- Increase the range of tools integrated, such as YouTube or PubMed.
-- Optimize LLM usage for better response generation.
-- Improve user experience with visual enhancements and loading indicators.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the GNU General Public License v3. See the `LICENSE` file for details.
 
 ## Acknowledgments
 
 - [LangChain](https://www.langchain.com/): For providing a flexible framework for integrating AI tools.
 - [Streamlit](https://streamlit.io/): For enabling fast and interactive app development.
 - [GROQ API](https://www.groq.com/): For LLM support.
-
-## Contact
-
-For further questions or collaboration, feel free to reach out!
+- [ArXiv](https://arxiv.org/): For providing access to academic papers.
+- [Wikipedia](https://www.wikipedia.org/): For offering article summaries.
 
