@@ -24,7 +24,7 @@ st.sidebar.title("Settings & Configuration")
 api_key=st.sidebar.text_input("Enter your GROQ APi Key", type="password")
 
 if api_key:
-    print("GROQ API Key is set")
+    st.success("GROQ API Key is set")
     if "messages" not in st.session_state:
         st.session_state["messages"]=[
             {"role":"assistant", "content":"Hello! I am your assistant. How can I help you today?"}
@@ -49,5 +49,5 @@ if api_key:
             st.session_state.messages.append({"role":"assistant", "content":response})
             st.write(response)   
 else:
-    print("Please enter your GROQ API Key")
+    st.error("Please enter your GROQ API Key")
     
