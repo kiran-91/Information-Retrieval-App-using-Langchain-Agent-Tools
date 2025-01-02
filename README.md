@@ -98,6 +98,8 @@ If you're on Team Lazy like me and would rather skip all the tasks, no worriesâ€
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
+![alt text](image-5.png)
+![alt text](image-4.png)
 
 
 ## License
