@@ -60,6 +60,13 @@ This project is a Streamlit-based web application that integrates with LangChain
    streamlit run app.py
    ```
 
+## Results 
+If you're on Team Lazy like me and would rather skip all the tasks, no worries—just kick back and check out the Streamlit app right here!
+   ``` 
+   https://langchainagent.streamlit.app/
+   ```
+
+
 ## How It Works
 
 1. **API Integration**:
@@ -80,9 +87,9 @@ This project is a Streamlit-based web application that integrates with LangChain
 
 
 
-## Usage
+## App Usage
 
-1. Start the application by running `streamlit run app.py`.
+1. Start the application by running `streamlit run app.py` or by the above mentioned `app` link 
 2. Enter your GROQ API key in the sidebar.
 3. Use the chat interface to ask questions or search for information.
 4. View the results sourced from ArXiv, Wikipedia, or web searches.
