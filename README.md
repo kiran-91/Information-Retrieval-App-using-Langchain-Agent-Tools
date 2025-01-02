@@ -33,8 +33,8 @@ This project is a Streamlit-based web application that integrates with LangChain
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kiran-91/Langchain-Agent-Tools-Unlocking-Conversational-AI.git
-   cd Langchain-Agent-Tools-Unlocking-Conversational-AI
+   git clone https://github.com/kiran-91/Information-Retrieval-App-using-Langchain-Agent-Tools.git
+   cd Information-Retrieval-App-using-Langchain-Agent-Tools
    ```
 
 2. Create a virtual environment and activate it:
