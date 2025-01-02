@@ -22,6 +22,8 @@ st.title("Search using Langchain Agent & Tools")
 # streamlit sidebar
 st.sidebar.title("Settings & Configuration")
 api_key=st.sidebar.text_input("Enter your GROQ APi Key", type="password")
+with st.sidebar:
+    st.markdown("If you encounter any tool error like `No results found` or `DuckDuckGo search error`, please reload or try again. It may be due to the tool's limitations or the search query.")
 
 if api_key:
     st.success("GROQ API Key is set")
