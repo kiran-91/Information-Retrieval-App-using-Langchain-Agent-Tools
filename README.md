@@ -1,6 +1,6 @@
 # Information Retrieval App using Langchain Agent & Tools
 
-## Overview
+## Project Overview
 This project is a **Streamlit-based web application** that integrates with LangChain tools to provide users with efficient, multi-source information retrieval. The app allows users to query academic papers, Wikipedia articles, and web search results using ArXiv, Wikipedia, and DuckDuckGo APIs. It also supports conversational interaction using a large language model (LLM) through the GROQ API.
 
 ## Features
@@ -14,25 +14,34 @@ This project is a **Streamlit-based web application** that integrates with LangC
 - **Dynamic Message Handling**: Maintains chat history and processes user prompts seamlessly.
 - **LLM Integration**: Powered by the GROQ API for natural language understanding and generating responses.
 
-## Installation
 
-### Prerequisites
-- Python 3.8+
-- A valid GROQ API key
-- Streamlit library installed
+## Project Structure
+
+```
+📁 Project Folder
+├── app.py                  # Main entry point for Streamlit
+├── .env                    # To store the API keys
+├── requirements.txt        # Dependencies for the app
+├── Dockerfile              # For docker containerization
+└── README.md
+```
+
+
+## Installation
 
 ### Steps
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
-   cd <repository_folder>
+   git clone https://github.com/kiran-91/Langchain-Agent-Tools-Unlocking-Conversational-AI.git
+   cd Langchain-Agent-Tools-Unlocking-Conversational-AI
    ```
 
 2. Create a virtual environment and activate it:
    ```bash
-   python -m venv env
-   source env/bin/activate  # On Windows, use `env\Scripts\activate`
+    python -m venv venv
+    source venv/bin/activate  # For Linux/MacOS
+    venv\Scripts\activate  # For Windows
    ```
 
 3. Install dependencies:
@@ -40,9 +49,10 @@ This project is a **Streamlit-based web application** that integrates with LangC
    pip install -r requirements.txt
    ```
 
-4. Create a `.env` file and add your GROQ API key:
+4. Create a `.env` file and add your GROQ API key and HuggingFace API key:
    ```env
-   GROQ_API_KEY=your_api_key_here
+   GROQ_API_KEY=<GROQ API KEY>
+   HF_API_KEY=<HuggingFace API KEY>
    ```
 
 5. Run the application:
@@ -68,14 +78,7 @@ This project is a **Streamlit-based web application** that integrates with LangC
    - User inputs are processed via the `st.chat_input` field.
    - The app dynamically updates chat history and displays responses from the integrated agent.
 
-## Project Structure
 
-```
-.
-|-- app.py                # Main application script
-|-- requirements.txt      # Python dependencies
-|-- .env.example          # Example for environment variables
-```
 
 ## Usage
 
