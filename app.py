@@ -14,7 +14,7 @@ arxiv=ArxivQueryRun(api_wrapper=arxiv_wrapper)
 wiki_wrapper=WikipediaAPIWrapper(top_k_results=2, doc_content_chars_max=1000)
 wiki=WikipediaQueryRun(api_wrapper=wiki_wrapper)
 
-search=DuckDuckGoSearchRun(name="DuckDuckGo Search", top_k_results=1)
+search=DuckDuckGoSearchRun(name="DuckDuckGo Search", top_k_results=2)
 
 # streamlit app
 st.title("Search using Langchain Agent & Tools")
