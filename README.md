@@ -87,7 +87,10 @@ This project is a Streamlit-based web application that integrates with LangChain
 3. Use the chat interface to ask questions or search for information.
 4. View the results sourced from ArXiv, Wikipedia, or web searches.
 
-
+![alt text](image-3.png)
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
 ## License
 
 This project is licensed under the GNU General Public License v3. See the `LICENSE` file for details.
