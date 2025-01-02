@@ -1,0 +1,13 @@
+streamlit 
+langchain-community
+langchain-core
+langchain-groq
+wikipedia
+ipykernel 
+arxiv
+langchain-huggingface
+chromadb
+faiss-cpu
+duckdb
+duckduckgo-search
+python-dotenv
