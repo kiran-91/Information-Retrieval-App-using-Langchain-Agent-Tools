@@ -23,27 +23,30 @@ st.title("Search using Langchain Agent & Tools")
 st.sidebar.title("Settings & Configuration")
 api_key=st.sidebar.text_input("Enter your GROQ APi Key", type="password")
 
-if "messages" not in st.session_state:
-    st.session_state["messages"]=[
-        {"role":"assistant", "content":"Hello! I am your assistant. How can I help you today?"}
-    ]
-    
-for msg in st.session_state.messages:
-    st.chat_message(msg["role"]).write(msg["content"])
-
-if prompt:=st.chat_input(placeholder="Type your message here..."):
-    st.session_state.messages.append({"role":"User", "content":prompt})
-    st.chat_message("User").write(prompt)
-    
-    llm=ChatGroq(api_key=api_key, model="Llama3.3-70b-versatile", streaming=True)
-    tools=[search, arxiv, wiki]
-    
-    search_agent=initialize_agent(tools=tools, llm=llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, handling_parsing_errors=True)
-
-    with st.chat_message("assistant"):
-        st_cb=StreamlitCallbackHandler(st.container(),expand_new_thoughts=True)
+if api_key:
+    if "messages" not in st.session_state:
+        st.session_state["messages"]=[
+            {"role":"assistant", "content":"Hello! I am your assistant. How can I help you today?"}
+        ]
         
-        response=search_agent.run(st.session_state.messages, callbacks=[st_cb]) 
-        st.session_state.messages.append({"role":"assistant", "content":response})
-        st.write(response)   
+    for msg in st.session_state.messages:
+        st.chat_message(msg["role"]).write(msg["content"])
+
+    if prompt:=st.chat_input(placeholder="Type your message here..."):
+        st.session_state.messages.append({"role":"User", "content":prompt})
+        st.chat_message("User").write(prompt)
+        
+        llm=ChatGroq(api_key=api_key, model="Llama-3.3-70b-Versatile", streaming=True)
+        tools=[search, arxiv, wiki]
+        
+        search_agent=initialize_agent(tools=tools, llm=llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, handling_parsing_errors=True)
+
+        with st.chat_message("assistant"):
+            st_cb=StreamlitCallbackHandler(st.container(),expand_new_thoughts=True)
+            
+            response=search_agent.run(st.session_state.messages, callbacks=[st_cb]) 
+            st.session_state.messages.append({"role":"assistant", "content":response})
+            st.write(response)   
+else:
+    print("Please enter your GROQ API Key")
     
